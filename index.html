@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Love</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="tela">
+        <h1>My Darling</h1>
+
+      <h2 id="h2">Do you want to be my girlfriend? </h2>
+
+
+       <a href="https://www.youtube.com/watch?v=izGwDsrQ1eQ" target="_blank" rel="external"> <button id="yes">Yes, my brotinho ❤️</button></a>
+        <button onmouseover="fuja()" id="no">No,leave me alone 😡</button>
+
+
+
+
+        <img src="https://i.pinimg.com/236x/6b/49/d4/6b49d42c132625f3642a7f61e60fe16d.jpg" alt="gif" id="gatinho">
+    </div>
+
+    <script>
+        function fuja(){
+            var botaoNao = document.getElementById('no')
+
+            var largurajanela = window.innerWidt;
+            var alturajanela = window.innerHeight;
+
+            var maxX = largurajanela - botaoNao.offsetWidth;
+            var maxY = alturajanela - botaoNao.offsetHeight;
+
+            var aleatorioX = Math.floor(Math.random() * maxX);
+            var aleatorioY = Math.floor(Math.random() * maxY);
+
+            botaoNao.style.right = aleatorioX + "px";
+            botaoNao.style.left = aleatorioX + "px";
+            botaoNao.style.top = aleatorioY + "px";
+        }
+    </script>
+</body>
+</html>
